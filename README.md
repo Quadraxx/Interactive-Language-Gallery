@@ -20,7 +20,7 @@ Her bir kart, ilgili dil hakkında kısa bilgi sunar ve **"Detay Gör"** butonun
 Proje, herhangi bir sunucu veya harici kütüphane bağımlılığı olmadan, tamamen ön yüz (Frontend) teknolojileriyle oluşturulmuştur.
 
 * **HTML5:** İçerik ve sayfa yapısı.
-* **CSS3:** Stil, Grid düzeni ve kart üzerine gelme (`:hover`) animasyonları.
+* **CSS3:** Stil, düzen (Grid) ve kart üzerine gelme (`:hover`) animasyonları.
 * **JavaScript (Vanilla JS):** Kartlara tıklama olayını yönetme ve detay kutusunu tetikleme mantığı.
 * **Font Awesome:** Dil ikonlarının sağlanması.
 
@@ -55,7 +55,14 @@ Bu projeyi çalıştırmak son derece basittir:
 ## 👤 İletişim
 
 * **Ad-Soyad:** Hüseyin Akın
-* **LinkedIn:** [LinkedIn Profiliniz Buraya Gelecek]
-* **GitHub:** [GitHub Profiliniz Buraya Gelecek]
+* **LinkedIn:** [Hüseyin Akın'ın LinkedIn Profili](https://www.linkedin.com/in/h%C3%BCseyi-ak%C4%B1n-a8372928a/)
+* **GitHub:** [Quadraxx GitHub Profili](https://github.com/Quadraxx)
 
 ---
+
+### Sırada Ne Var?
+
+1.  GitHub'da **`Interactive-Language-Gallery`** deposunu oluşturmak.
+2.  `index.html`, `style.css`, `script.js` ve bu `README.md` dosyasını depoya yüklemek.
+
+Bu adımları sırayla sizinle birlikte yapalım mı?
