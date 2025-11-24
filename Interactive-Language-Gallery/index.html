@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkileşimli Dil Galerisi | Hüseyin Akın</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="gallery-item" data-language="Python">
+            <div class="card-content">
+                <i class="fab fa-python fa-3x" style="color:#3498db; margin-bottom: 10px;"></i>
+                <h3>Python</h3>
+                <p>Veri Bilimi ve Yapay Zeka için vazgeçilmezdir. Temiz ve okunabilir sözdizimi vardır.</p>
+                <a href="#" class="view-btn" onclick="showInfo('Python'); return false;">Detay Gör</a>
+            </div>
+        </div>
+        
+        <div class="gallery-item" data-language="JavaScript">
+            <div class="card-content">
+                <i class="fab fa-js fa-3x" style="color:#f1c40f; margin-bottom: 10px;"></i>
+                <h3>JavaScript</h3>
+                <p>Web tarayıcılarının dilidir. Frontend ve Backend (Node.js) geliştirmede kullanılır.</p>
+                <a href="#" class="view-btn" onclick="showInfo('JavaScript'); return false;">Detay Gör</a>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-language="HTML5">
+            <div class="card-content">
+                <i class="fab fa-html5 fa-3x" style="color:#e67e22; margin-bottom: 10px;"></i>
+                <h3>HTML5</h3>
+                <p>Web sitelerinin iskelet yapısını oluşturur. Semantik etiketleri ve medya desteği sunar.</p>
+                <a href="#" class="view-btn" onclick="showInfo('HTML5'); return false;">Detay Gör</a>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-language="CSS3">
+            <div class="card-content">
+                <i class="fab fa-css3-alt fa-3x" style="color:#2980b9; margin-bottom: 10px;"></i>
+                <h3>CSS3</h3>
+                <p>Web sitelerinin görsel stilini ve düzenini (Grid/Flexbox) yönetir.</p>
+                <a href="#" class="view-btn" onclick="showInfo('CSS3'); return false;">Detay Gör</a>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-language="Flask">
+            <div class="card-content">
+                <i class="fas fa-flask fa-3x" style="color:#7f8c8d; margin-bottom: 10px;"></i>
+                <h3>Flask (Python)</h3>
+                <p>Hafif ve minimalist bir Python web çatısıdır. Hızlı API projeleri için idealdir.</p>
+                <a href="#" class="view-btn" onclick="showInfo('Flask'); return false;">Detay Gör</a>
+            </div>
+        </div>
+        
+        <div class="gallery-item" data-language="SQL">
+            <div class="card-content">
+                <i class="fas fa-database fa-3x" style="color:#e74c3c; margin-bottom: 10px;"></i>
+                <h3>SQL</h3>
+                <p>Veritabanı yönetimi ve sorgulama dilidir. Tüm ilişkisel veritabanlarının temelidir.</p>
+                <a href="#" class="view-btn" onclick="showInfo('SQL'); return false;">Detay Gör</a>
+            </div>
+        </div>
+        
+        <div class="gallery-item" data-language="C#">
+            <div class="card-content">
+                <i class="fas fa-code fa-3x" style="color:#9b59b6; margin-bottom: 10px;"></i>
+                <h3>C# (.NET)</h3>
+                <p>Microsoft tarafından geliştirilmiştir. Kurumsal uygulamalar ve oyun (Unity) için kullanılır.</p>
+                <a href="#" class="view-btn" onclick="showInfo('C#'); return false;">Detay Gör</a>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-language="React">
+            <div class="card-content">
+                <i class="fab fa-react fa-3x" style="color:#61dafb; margin-bottom: 10px;"></i>
+                <h3>React (JS)</h3>
+                <p>Meta tarafından geliştirilen popüler bir kullanıcı arayüzü kütüphanesidir.</p>
+                <a href="#" class="view-btn" onclick="showInfo('React'); return false;">Detay Gör</a>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-language="Git">
+            <div class="card-content">
+                <i class="fab fa-git-alt fa-3x" style="color:#e65239; margin-bottom: 10px;"></i>
+                <h3>Git & GitHub</h3>
+                <p>Versiyon kontrol sistemi ve kod depolama platformudur. Ekip çalışması için şarttır.</p>
+                <a href="#" class="view-btn" onclick="showInfo('Git'); return false;">Detay Gör</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="detail-box" style="display: none;">
+        <h4 id="detail-title"></h4>
+        <p id="detail-content"></p>
+        <span id="close-btn" onclick="closeDetail()">X</span> 
+    </div>
+
+    <script src="script.js"></script> 
+
+</body>
+</html>

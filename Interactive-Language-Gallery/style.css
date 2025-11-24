@@ -1,0 +1,189 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Poppins', sans-serif; /* Daha modern bir font varsayımı */
+    margin: 0;
+    /* Hafif degrade arka plan */
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef); 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* İçeriği dikey sırala */
+    align-items: center;
+    padding: 40px 20px;
+    padding-bottom: 120px; /* Detay kutusu için boşluk */
+}
+
+/* Yeni: Ana Başlık Stili */
+.main-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+}
+.main-header h1 {
+    font-size: 2.5em;
+    color: #007bff; /* Mavi renk vurgusu */
+    border-bottom: 3px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.main-header p {
+    color: #6c757d;
+    font-size: 1.1em;
+}
+
+
+/* 1. Kısım: CSS Grid Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; /* Boşluğu artırdık */
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* 2. Kısım: Galeri Kartları */
+.gallery-item {
+    background-color: white;
+    min-height: 280px;
+    border-radius: 15px; /* Daha yuvarlak köşeler */
+    padding: 30px;
+    /* Derin ve yumuşak gölge */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Daha yumuşak geçiş */
+    border-left: 5px solid #007bff; /* Sol kenara renkli çizgi */
+    
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    text-align: left;
+    overflow: hidden; /* İkon animasyonu için */
+}
+
+/* Kartın üzerine gelince animasyon */
+.gallery-item:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-8px); /* Daha belirgin kaydırma */
+    border-left-color: #28a745; /* Vurgu rengi değiştir */
+    cursor: pointer;
+}
+
+/* Yeni: İkon Hareketi ve Rengi */
+.gallery-item:hover i {
+    transform: scale(1.1); /* İkonu büyüt */
+    filter: brightness(1.2); /* Parlaklık artır */
+    transition: all 0.3s;
+}
+
+/* Başlık ve Açıklama Stilleri */
+.gallery-item h3 {
+    color: #343a40;
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.gallery-item p {
+    color: #6c757d;
+    font-size: 0.95em;
+    flex-grow: 1; 
+    margin-bottom: 20px;
+}
+
+/* Buton Stili (Daha büyük ve belirgin) */
+.view-btn {
+    display: block; /* Tam genişlik */
+    background-color: #007bff; /* Ana Mavi */
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+}
+
+.view-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+
+/* --- YENİ KISIM: Detay Kutusu Stili (Footer Bar) --- */
+#detail-box {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* Daha koyu ve premium arka plan */
+    background: linear-gradient(to right, #343a40, #212529); 
+    color: white;
+    padding: 20px 50px;
+    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.5); 
+    z-index: 100; 
+    box-sizing: border-box;
+    /* Başlangıçta ekranın altında gizli */
+    transform: translateY(100%); 
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Yaylı (spring) animasyon */
+}
+
+/* JavaScript ile 'active' sınıfı eklendiğinde görünür hale gelir */
+#detail-box.active {
+    transform: translateY(0);
+}
+
+#detail-box h4 {
+    margin-top: 0;
+    color: #28a745; /* Yeşil vurgu */
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+#detail-box p {
+    margin: 5px 0 0 0;
+    font-size: 1.05em;
+    line-height: 1.4;
+}
+
+#close-btn {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #dc3545; /* Kırmızı kapatma butonu */
+    transition: color 0.3s;
+}
+
+#close-btn:hover {
+    color: #ffc107; /* Sarımsı vurgu */
+}
+
+
+/* RESPONSIVE TASARIM */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    body {
+        padding: 20px 10px;
+        padding-bottom: 100px;
+    }
+    .main-header {
+        margin-bottom: 30px;
+    }
+    #detail-box {
+        padding: 15px 20px;
+    }
+    #close-btn {
+        right: 20px;
+        font-size: 1.4em;
+    }
+}
